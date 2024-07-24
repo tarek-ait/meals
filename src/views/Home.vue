@@ -1,6 +1,6 @@
 <template>
     <div class="flex h-full flex-col p-8">
-        <div class="flex h-full justify-center gap-2 mt-2">
+        <div class="flex h-full letters justify-center gap-2 mt-2">
           <router-link :to="{ name: 'ByLetter', params: { letter } }" v-for="letter of letters" :key="letter">
              {{  letter }}
           </router-link>
@@ -22,6 +22,16 @@ export default{
 
 <style>
 
+
+.letters{
+  flex-wrap: wrap;
+}
+
+@media (min-width:400px) {
+  .letters{
+    flex-wrap: wrap;
+  }
+}
 </style>
 
 
